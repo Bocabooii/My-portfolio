@@ -1,10 +1,11 @@
 import React from 'react'
-import arrayDestruct from '../assets/portfolio/arrayDestruct.jpg'
-import installNode from '../assets/portfolio/installNode.jpg'
 import navbar from '../assets/portfolio/navbar.jpg'
-import reactParallax from '../assets/portfolio/reactParallax.jpg'
-import reactSmooth from '../assets/portfolio/reactSmooth.jpg'
 import reactWeather from '../assets/portfolio/reactWeather.jpg'
+import notetaker from "../assets/portfolio/notetaker.png"
+import volunteerquest from "../assets/portfolio/volunteerquest.png"
+import beatspotify from "../assets/portfolio/beatspotify.png"
+import quiz from "../assets/portfolio/quizsimulator.png"
+
 
 
 const Portfolio = () => {
@@ -12,27 +13,74 @@ const Portfolio = () => {
   const portfolio = [
     {
       id: 1,
-      src: arrayDestruct,
+
+      child: (
+        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
+          Demo
+        </button>
+      ),
+      
+      src: notetaker,
+      href: "https://bocabooii.github.io/Express.js_Note-Taker/"
+      
     },
     {
       id: 2,
-      src: reactParallax,
+      child: (
+        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
+          Demo
+        </button>
+      ),
+
+      src: volunteerquest,
+      href: "https://volunteer-quest.herokuapp.com/"
     },
     {
       id: 3,
-      src: navbar,
+
+      child: (
+        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
+          Demo
+        </button>
+      ),
+
+      src: reactWeather,
+      href: "https://bocabooii.github.io/Weather-Dashboard/"
     },
     {
       id: 4,
-      src: reactSmooth,
+
+      child: (
+        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
+          Demo
+        </button>
+      ),
+
+      src: beatspotify,
+      href: "https://bocabooii.github.io/Beat-Spotify/"
     },
     {
       id: 5,
-      src: installNode,
+
+      child: (
+        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
+          Demo
+        </button>
+      ),
+
+      src: quiz,
+      href: "https://bocabooii.github.io/Quiz-Simulator/"
     },
     {
       id: 6,
-      src: reactWeather,
+
+      child: (
+        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 '>
+          N/A
+        </button>
+      ),
+
+      src: navbar,
     },
   ]
 
@@ -47,12 +95,16 @@ const Portfolio = () => {
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
 
               {
-                portfolio.map(({ id, src }) => (
+                portfolio.map(({ id, src, child, href }) => (
                   <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
                   <img src={src} alt='' className='rounded-md duration-200 hover:scale-105'/>
                   <div className='flex items-center justify-center'>
-                      <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Demo</button>
-                      <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</button>
+                    <a href={href}
+                     target='_blank'
+                     rel="noreferrer"
+                     >
+                      {child}
+                    </a>
                   </div>
               </div>
 
