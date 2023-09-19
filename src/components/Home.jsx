@@ -11,7 +11,7 @@ const Home = () => {
                 <h2 className='text-4xl sm:text-7xl font-bold text-white'>Im A Full Stack Developer</h2>
                 <p className='text-gray-500 py-4 max-w-md'>
                 Growing web developer seeking a career in web development to improve on my skills and be a viable asset to the company. 
-                Enjoy desinging software with Mongo, Express js, React, Node, and GraphQl. 
+                Enjoy designing software with Mongo, Express js, React, Node, and GraphQl. 
                 </p>
 
                 <div>
